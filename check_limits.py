@@ -7,7 +7,7 @@ def temp_validation(value):
     """
     min_value = 0
     max_value = 45
-    return True if value > min_value < max_value else False
+    return True if (value > min_value) and (value < max_value) else False
 
 
 def soc_validation(value):
@@ -18,7 +18,7 @@ def soc_validation(value):
     """
     min_value = 20
     max_value = 80
-    return True if value > min_value < max_value else False
+    return True if (value > min_value) and (value < max_value) else False
 
 
 def cr_validation(value):
@@ -28,7 +28,7 @@ def cr_validation(value):
     :return: Boolean
     """
     max_value = 0.8
-    return True if value < max_value else False
+    return True if (value < max_value) else False
 
 
 def battery_is_ok(temp_val, soc_val, cr_val):
