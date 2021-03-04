@@ -28,7 +28,7 @@ def cr_validation(value):
     :return: Boolean
     """
     max_value = 0.8
-    return True if value > max_value else False
+    return True if value < max_value else False
 
 
 def battery_is_ok(temp_val, soc_val, cr_val):
